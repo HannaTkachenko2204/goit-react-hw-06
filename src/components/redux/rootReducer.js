@@ -1,5 +1,5 @@
-import { contactsReducer } from "./contactsSlice.js";
-import { filtersReducer } from "./filtersSlice.js";
+import contactsReducer from "./contactsSlice";
+import filtersReducer from "./filtersSlice";
 
 const rootReducer = {
   contacts: contactsReducer,
