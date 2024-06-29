@@ -1,11 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Contact from "../Contact/Contact";
 import css from "./ContactList.module.css";
 import { selectContacts } from "../redux/contactsSlice";
 import { selectNameFilter } from "../redux/filtersSlice";
 
 const ContactList = () => {
-  // const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectNameFilter);
 
@@ -24,6 +23,7 @@ const ContactList = () => {
           <Contact
             name={contact.name}
             number={contact.number}
+            id={contact.id}
           />
         </li>
       ))}

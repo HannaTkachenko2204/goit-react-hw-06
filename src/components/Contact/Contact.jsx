@@ -11,7 +11,7 @@ const Contact = ({ name, number, id }) => {
   //   setContacts((contacts) => contacts.filter((contact) => contact.id !== id));
   // };
 
-  const delCont = () => dispatch(deleteContact(id));
+  const handleClickDelete = () => dispatch(deleteContact(id));
 
   return (
     <div className={css.item}>
@@ -25,7 +25,7 @@ const Contact = ({ name, number, id }) => {
           {number}
         </p>
       </div>
-      <button onClick={delCont}>Delete</button>
+      <button onClick={handleClickDelete}>Delete</button>
     </div>
   );
 };
